@@ -29,8 +29,6 @@ class EcwidProductApi {
 	}
 
 	function internal_fetch_url_libcurl($url) {
-		if (intval($timeout) <= 0)
-			$timeout = 90;
 		if (!function_exists('curl_init'))
 			return array("code"=>"0","data"=>"libcurl is not installed");
 		$headers[] = "Content-Type: application/x-www-form-urlencoded";
